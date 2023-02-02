@@ -1,17 +1,16 @@
-package com.imooc.netty.ch12.connection;
+package com.ae.ch8;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-
-import static com.imooc.netty.ch12.connection.Constant.BEGIN_PORT;
-import static com.imooc.netty.ch12.connection.Constant.N_PORT;
+import static com.ae.ch8.Constant.BEGIN_PORT;
+import static com.ae.ch8.Constant.N_PORT;
 
 public class Client {
 
-    private static final String SERVER_HOST = "192.168.1.42";
+    private static final String SERVER_HOST = "192.168.145.102";
 
     public static void main(String[] args) {
         new Client().start(BEGIN_PORT, N_PORT);
@@ -19,8 +18,10 @@ public class Client {
 
     public void start(final int beginPort, int nPort) {
         System.out.println("client starting....");
+
         EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
-        final Bootstrap bootstrap = new Bootstrap();
+
+        Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(eventLoopGroup);
         bootstrap.channel(NioSocketChannel.class);
         bootstrap.option(ChannelOption.SO_REUSEADDR, true);
@@ -29,7 +30,6 @@ public class Client {
             protected void initChannel(SocketChannel ch) {
             }
         });
-
 
         int index = 0;
         int port;
@@ -45,6 +45,7 @@ public class Client {
                 });
                 channelFuture.get();
             } catch (Exception e) {
+                e.printStackTrace();
             }
 
             if (++index == nPort) {

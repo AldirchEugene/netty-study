@@ -1,4 +1,4 @@
-package com.imooc.netty.ch12.thread;
+package com.ae.ch9;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelInitializer;
@@ -8,8 +8,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.FixedLengthFrameDecoder;
-
-import static com.imooc.netty.ch12.thread.Constant.PORT;
+import static com.ae.ch9.Constant.PORT;
 
 public class Client {
 

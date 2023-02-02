@@ -1,4 +1,4 @@
-package com.imooc.netty.ch12.thread;
+package com.ae.ch9;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -11,7 +11,6 @@ import java.util.concurrent.ThreadLocalRandom;
 @ChannelHandler.Sharable
 public class ServerBusinessHandler extends SimpleChannelInboundHandler<ByteBuf> {
     public static final ChannelHandler INSTANCE = new ServerBusinessHandler();
-
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) {
