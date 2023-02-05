@@ -45,7 +45,7 @@
                             <appendAssemblyId>false</appendAssemblyId>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.ae.ch8.Server</mainClass>
+                                    <mainClass>com.ae.netty.ch8.Server</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -67,7 +67,7 @@
                             <appendAssemblyId>false</appendAssemblyId>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.ae.ch8.Client</mainClass>
+                                    <mainClass>com.ae.netty.ch8.Client</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
